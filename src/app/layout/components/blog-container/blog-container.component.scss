@@ -1,0 +1,9 @@
+@import "var";
+:host {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  min-width: 680px;
+  max-width: 960px;
+}
+

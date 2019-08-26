@@ -1,0 +1,39 @@
+@import "var";
+.md-content {
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 5em;
+  h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    border-bottom: 1px solid $border-color;
+  }
+  h1 {
+    font-size: 2em;
+    padding-bottom: .3em;
+  }
+  h2 {
+    font-size: 1.5em;
+    padding-bottom: .3em;
+  }
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  img {
+    max-height: 100%;
+  }
+  blockquote {
+    P {
+      margin: 0;
+    }
+    background-color: #f5f2f0;
+    border: .3em solid #e0dfcc;
+    border-radius: 1em;
+    color: #6a737d;
+    padding: 1em;
+    margin: 0 .3em 1em .3em;
+  }
+}

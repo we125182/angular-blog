@@ -1,13 +1,15 @@
 @import "var";
 :host {
   display: block;
-  padding: 16px 20px;
+  padding: 16px 0;
   border-bottom: 1px solid #d3d3d3;
   line-height: 30px;
 }
 
 .header-title {
-  font-size: 18px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #556677;
 }
 
 .header-search {

@@ -11,7 +11,7 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "./",
       "prefix": "jd",
       "architect": {
         "build": {
@@ -25,7 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "blogs"
             ],
             "styles": [
               "src/styles.scss"

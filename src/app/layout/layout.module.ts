@@ -6,6 +6,8 @@ import { AsideComponent } from './components/aside/aside.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogContainerComponent } from './components/blog-container/blog-container.component';
+import { LayoutComponent } from './layout.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { BlogContainerComponent } from './components/blog-container/blog-contain
     AsideComponent,
     BlogComponent,
     FooterComponent,
-    BlogContainerComponent
+    BlogContainerComponent,
+    LayoutComponent
   ],
   exports: [
     HeaderComponent,
@@ -24,7 +27,8 @@ import { BlogContainerComponent } from './components/blog-container/blog-contain
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class LayoutModule {

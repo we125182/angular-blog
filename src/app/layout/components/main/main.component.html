@@ -1,1 +1,13 @@
-<p>main hot</p>
+<div class="article-wrap">
+  <h1 class="article-title" [routerLink]="latestArticle.path">{{latestArticle.title}}</h1>
+  <p>{{latestArticle.desc}}</p>
+  <div class="link-wrap align-right">
+    <a [routerLink]="latestArticle.path">阅读全文 »</a>
+  </div>
+</div>
+<h3>最新文章列表</h3>
+<ul class="list">
+  <li class="list-item" *ngFor="let item of mdList">
+    <a [routerLink]="item.path">{{item.time | date: 'yyyy/MM/dd'}}: {{item.name}}</a>
+  </li>
+</ul>

@@ -3,7 +3,9 @@
   display: block;
   flex: 1;
   padding: $v-padding $h-padding;
-  border: 1px solid $border-color;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+h3 {
+  margin-top: 2em;
 }

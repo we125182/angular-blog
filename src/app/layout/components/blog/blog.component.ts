@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
 import Markdown from 'markdown-it';
 import hljs from 'highlight.js';
-import { HttpClient } from '@angular/common/http';
+import {parse} from '../../../../../scripts/formatMd.js';
 @Component({
   selector: 'jd-blog',
   templateUrl: './blog.component.html',
@@ -22,15 +25,20 @@ export class BlogComponent implements OnInit {
     }
   });
   md2Html: any;
+  mdName: string;
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    private route: ActivatedRoute
+  ) {
+    route.paramMap.subscribe((params) => this.mdName = params.get('blogId'));
+  }
 
   getMd() {
-    this.http.get('blogs/README.md', {responseType: 'text'})
+    this.http.get(`blogs/${this.mdName}`, {responseType: 'text'})
       .subscribe(res => {
-        console.log(typeof res);
-        this.md2Html = this.md.render(res);
+        const formatContent = parse(res);
+        const content = formatContent.title ? `# ${formatContent.title} ${formatContent._content}` : formatContent._content;
+        this.md2Html = this.md.render(content);
       });
   }
   ngOnInit() {

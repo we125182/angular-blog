@@ -3,27 +3,16 @@
   line-height: 1.5;
   font-size: 16px;
   margin-bottom: 5em;
-  h1, h2, h3, h4, h5 {
-    font-weight: 600;
-    line-height: 1.25;
-    margin-bottom: 16px;
-    margin-top: 24px;
-    border-bottom: 1px solid $border-color;
-  }
-  h1 {
-    font-size: 2em;
-    padding-bottom: .3em;
-  }
-  h2 {
-    font-size: 1.5em;
-    padding-bottom: .3em;
-  }
-  a {
-    color: #0366d6;
-    text-decoration: none;
+  ol, ul {
+    line-height: 180%;
   }
   img {
-    max-height: 100%;
+    max-width: 100%;
+  }
+  p {
+    line-height: 180%;
+    margin-top: 1em;
+    margin-left: .8em;
   }
   blockquote {
     P {
@@ -36,4 +25,27 @@
     padding: 1em;
     margin: 0 .3em 1em .3em;
   }
+}
+
+h1, h2{
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  border-bottom: 1px solid $border-color;
+}
+h3, h4, h5 {
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 1em;
+  padding-bottom: .2em;
+  margin-left: .5em;
+}
+h1 {
+  font-size: 2em;
+  padding-bottom: .3em;
+}
+h2 {
+  font-size: 1.5em;
+  padding-bottom: .3em;
 }

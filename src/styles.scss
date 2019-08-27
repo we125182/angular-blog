@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "var";
+@import "normalize";
 @import "~highlight.js/scss/atom-one-dark";
 @import "highlight";
 @import "md";
@@ -13,7 +14,7 @@ html, body {
 
 .content {
   height: 100%;
-  width: 85%;
+  width: 65%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -22,5 +23,106 @@ html, body {
 .main {
   flex: 1;
   display: flex;
-  padding: 14px 16px;
+  margin: 1em 3em;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.article-wrap {
+  padding-bottom: 1em;
+  border-bottom: 1px solid $border-color;
+}
+
+.aside {
+  display: block;
+  width: 25%;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.header {
+  display: block;
+  padding: 16px 0;
+  border-bottom: 1px solid #d3d3d3;
+  line-height: 30px;
+}
+
+.footer {
+  text-align: right;
+}
+
+.blog-container {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+@media screen and (min-width: 320px) {
+  .content {
+    width: 100%;
+  }
+  .main {
+    margin: 0;
+    flex-direction: column;
+  }
+  .aside {
+    width: auto;
+  }
+  .header-search {
+    display: none;
+  }
+  .header {
+    padding-left: 18px;
+  }
+  .footer {
+    text-align: center;
+  }
+  .blog-container {
+    width: auto;
+  }
+  .md-content {
+    margin: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    width: 65%;
+  }
+  .main {
+    flex-direction: row;
+  }
+  .aside {
+    width: 25%;
+    min-width: 180px;
+    max-width: 300px;
+  }
+  .header-search {
+    display: initial;
+  }
+  .header {
+    padding-left: 0;
+  }
+  .footer {
+    text-align: right;
+  }
+  .blog-container {
+    width: 50%;
+  }
+  .md-content {
+    margin: 0 0 3em 0;
+  }
 }
